@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<! basado en https://mbostock.github.io/d3/talk/20111018/partition.html -->
+<!-- basado en https://mbostock.github.io/d3/talk/20111018/partition.html -->
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
@@ -57,7 +57,7 @@ var vis = d3.select("#body").append("div")
 var partition = d3.layout.partition()
     .value(function(d) { return d.size; });
 
-d3.json("http://www.atelierdechile.cl/visual/atelier.json", function(root) {
+d3.json("atelier.json", function(root) {
   var g = vis.selectAll("g")
       .data(partition.nodes(root))
     .enter().append("svg:g")
