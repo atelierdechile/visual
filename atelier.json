@@ -4,60 +4,48 @@
   {
    "name": "IDEAS",
    "children": [
-    {
-     "name": "Mobile",
+    {"name": "KM - Latch",
      "children": [
-      {"name": "AgglomerativeCluster", "size": 3938},
-      {"name": "CommunityStructure", "size": 3812},
-      {"name": "HierarchicalCluster", "size": 6714},
-      {"name": "MergeEdge", "size": 743}
+      {"name": "Location", "size": 1001},
+      {"name": "Alphabetic", "size": 1002},
+      {"name": "Timeline", "size": 1004},
+      {"name": "Category", "size": 1004},
+      {"name": "Hierarchy", "size": 1005}
      ]
     },
-    {
-     "name": "Objects",
+    {"name": "Objects for Real Desing",
      "children": [
-      {"name": "BetweennessCentrality", "size": 3534},
-      {"name": "LinkDistance", "size": 5731},
-      {"name": "MaxFlowMinCut", "size": 7840},
-      {"name": "ShortestPaths", "size": 5914},
-      {"name": "SpanningTree", "size": 3416}
+      {"name": "Water", "size": 1001},
+      {"name": "xtream Situations", "size": 1002},
+      {"name": "Drones", "size": 1003},
+      {"name": "Otros", "size": 1004}
      ]
     },
-    {
-     "name": "Salud",
+    {"name": "Salud",
      "children": [
-      {"name": "AspectRatioBanker", "size": 7074}
+      {"name": "Diabetes", "size": 7074}
      ]
     }
    ]
   },
   {
-   "name": "data",
+   "name": "INNO SOCIAL",
    "children": [
     {
      "name": "converters",
      "children": [
       {"name": "Converters", "size": 721},
-      {"name": "DelimitedTextConverter", "size": 4294},
-      {"name": "GraphMLConverter", "size": 9800},
-      {"name": "IDataConverter", "size": 1314},
       {"name": "JSONConverter", "size": 2220}
      ]
     },
     {"name": "DataField", "size": 1759},
-    {"name": "DataSchema", "size": 2165},
-    {"name": "DataSet", "size": 586},
-    {"name": "DataSource", "size": 3331},
-    {"name": "DataTable", "size": 772},
     {"name": "DataUtil", "size": 3322}
    ]
   },
   {
-   "name": "display",
+   "name": "BWG",
    "children": [
     {"name": "DirtySprite", "size": 8833},
-    {"name": "LineSprite", "size": 1732},
-    {"name": "RectSprite", "size": 3623},
     {"name": "TextSprite", "size": 10066}
    ]
   },
@@ -67,47 +55,9 @@
     {"name": "SOCIAL IDEAS", "size": 4116}
    ]
   },
-  {
-   "name": "physics",
-   "children": [
-    {"name": "DragForce", "size": 1082},
-    {"name": "GravityForce", "size": 1336},
-    {"name": "IForce", "size": 319},
-    {"name": "NBodyForce", "size": 10498},
-    {"name": "Particle", "size": 2822},
-    {"name": "Simulation", "size": 9983},
-    {"name": "Spring", "size": 2213},
-    {"name": "SpringForce", "size": 1681}
-   ]
-  },
-  {
-   "name": "query",
-   "children": [
-    {"name": "AggregateExpression", "size": 1616},
-    {"name": "And", "size": 1027},
-    {"name": "Arithmetic", "size": 3891},
-    {"name": "Average", "size": 891},
-    {"name": "BinaryExpression", "size": 2893},
-    {"name": "Comparison", "size": 5103},
-    {"name": "CompositeExpression", "size": 3677},
-    {"name": "Count", "size": 781},
-    {"name": "Match", "size": 3748},
-    {"name": "Maximum", "size": 843},
-    {
-     "name": "methods",
-     "children": [
-      {"name": "add", "size": 593},
-      {"name": "and", "size": 330}
-     ]
-    },
+  
     {"name": "Minimum", "size": 843},
     {"name": "Not", "size": 1554},
-    {"name": "Or", "size": 970},
-    {"name": "Query", "size": 13896},
-    {"name": "Range", "size": 1594},
-    {"name": "StringUtil", "size": 4130},
-    {"name": "Sum", "size": 791},
-    {"name": "Variable", "size": 1124},
     {"name": "Variance", "size": 1876},
     {"name": "Xor", "size": 1101}
    ]
