@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <!-- based on https://bl.ocks.org/mbostock/4339083 -->
+
 <style>
 
 .node {
@@ -48,7 +49,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.json("https://atelierdechile.github.io/visual/atelier.json", function(error, flare) {
+d3.json("atelier.json", function(error, flare) {
   if (error) throw error;
 
   root = flare;
