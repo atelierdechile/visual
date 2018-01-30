@@ -45,7 +45,7 @@ var vis = d3.select("#body").append("svg:svg")
     .attr("height", h + m[0] + m[2])
   .append("svg:g")
     .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
-d3.json("atelier.json", function(json) {
+d3.json("latch.json", function(json) {
   root = json;
   root.x0 = h / 2;
   root.y0 = 0;
