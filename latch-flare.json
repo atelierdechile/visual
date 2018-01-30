@@ -1,7 +1,7 @@
 {
- "name": "latch",
+ "name": "latch-flare",
  "children": [
-  {"name": "location",
+  {"name": "latch",
    "children": [
     {"name": "location",
      "children": [
