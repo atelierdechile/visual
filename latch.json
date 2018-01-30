@@ -1,8 +1,8 @@
 {
- "name": "flare",
+ "name": "LATCH",
  "children": [
   {
-   "name": "analytics",
+   "name": "Location",
    "children": [
     {
      "name": "cluster",
@@ -32,7 +32,7 @@
    ]
   },
   {
-   "name": "animate",
+   "name": "Alphabetic",
    "children": [
     {"name": "Easing", "size": 17010},
     {"name": "FunctionSequence", "size": 5842},
