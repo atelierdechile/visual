@@ -58,7 +58,7 @@ g.call(d3.axisBottom(x)
     .remove();
 d3.queue()
     .defer(d3.json, "choropleth_regiones_cl.json")
-    .defer(d3.tsv, "choropleth-cl.tsv", function(d) { unemployment.set(d.id, +d.rate); })
+    .defer(d3.tsv, "choropleth_regiones_cl.tsv", function(d) { unemployment.set(d.id, +d.rate); })
     .await(ready);
 function ready(error, us) {
   if (error) throw error;
