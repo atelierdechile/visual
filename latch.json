@@ -92,12 +92,6 @@
    ]
   },
   {
-   "name": "flex",
-   "children": [
-    {"name": "FlareVis", "size": 4116}
-   ]
-  },
-  {
    "name": "physics",
    "children": [
     {"name": "DragForce", "size": 1082},
