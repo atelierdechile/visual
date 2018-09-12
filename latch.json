@@ -1,8 +1,8 @@
 {
- "name": "flare",
+ "name": "LATCH",
  "children": [
   {
-   "name": "analytics",
+   "name": "Location",
    "children": [
     {
      "name": "cluster",
@@ -32,7 +32,7 @@
    ]
   },
   {
-   "name": "scale",
+   "name": "Alphabetic",
    "children": [
     {"name": "IScaleMap", "size": 2105},
     {"name": "LinearScale", "size": 1316},
@@ -41,10 +41,18 @@
    ]
   },
   {
-   "name": "util",
+   "name": "Time",
+   "children": [
+    {"name": "IScaleMap", "size": 2105},
+    {"name": "LinearScale", "size": 1316},
+    {"name": "ScaleType", "size": 1821},
+    {"name": "TimeScale", "size": 5833}
+   ]
+  },
+  {
+   "name": "Category",
    "children": [
     {"name": "Arrays", "size": 8258},
-    {"name": "Dates", "size": 8217},
     {"name": "Filter", "size": 2324},
     {"name": "Geometry", "size": 10993},
     {
@@ -55,13 +63,11 @@
      ]
     },
     {"name": "IEvaluable", "size": 335},
-    {"name": "IPredicate", "size": 383},
     {"name": "IValueProxy", "size": 874},
     {
      "name": "math",
      "children": [
       {"name": "DenseMatrix", "size": 3165},
-      {"name": "IMatrix", "size": 2815},
       {"name": "SparseMatrix", "size": 3366}
      ]
     },
@@ -71,38 +77,23 @@
      "name": "palette",
      "children": [
       {"name": "ColorPalette", "size": 6367},
-      {"name": "Palette", "size": 1229},
-      {"name": "ShapePalette", "size": 2059},
       {"name": "SizePalette", "size": 2291}
      ]
     },
     {"name": "Property", "size": 5559},
-    {"name": "Shapes", "size": 19118},
-    {"name": "Sort", "size": 6887},
     {"name": "Stats", "size": 6557},
     {"name": "Strings", "size": 22026}
    ]
   },
   {
-   "name": "vis",
+   "name": "Hierarchy",
    "children": [
     {
      "name": "axis",
      "children": [
       {"name": "Axes", "size": 1302},
-      {"name": "Axis", "size": 24593},
-      {"name": "AxisGridLine", "size": 652},
       {"name": "AxisLabel", "size": 636},
       {"name": "CartesianAxes", "size": 6703}
-     ]
-    },
-    {
-     "name": "controls",
-     "children": [
-      {"name": "AnchorControl", "size": 2138},
-      {"name": "ClickControl", "size": 3824},
-      {"name": "Control", "size": 1353},
-      {"name": "TooltipControl", "size": 8435}
      ]
     },
     {
@@ -115,22 +106,11 @@
        "name": "render",
        "children": [
         {"name": "ArrowType", "size": 698},
-        {"name": "IRenderer", "size": 353},
         {"name": "ShapeRenderer", "size": 2247}
        ]
       },
       {"name": "ScaleBinding", "size": 11275},
-      {"name": "Tree", "size": 7147},
       {"name": "TreeBuilder", "size": 9930}
-     ]
-    },
-    {
-     "name": "events",
-     "children": [
-      {"name": "DataEvent", "size": 2313},
-      {"name": "SelectionEvent", "size": 1880},
-      {"name": "TooltipEvent", "size": 1701},
-      {"name": "VisualizationEvent", "size": 1117}
      ]
     },
     {
