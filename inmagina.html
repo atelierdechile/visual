@@ -1,0 +1,140 @@
+// URL: https://observablehq.com/@d3/circle-packing
+// Title: Circle Packing
+// Author: D3 (@d3)
+// Version: 161
+// Runtime version: 1
+
+const m0 = {
+  id: "0edfeb766ced5a8c@161",
+  variables: [
+    {
+      inputs: ["md"],
+      value: (function(md){return(
+md`# Circle Packing
+
+The area of each leaf circle in a circle-packing diagram is proportional its value (here, file size). Although nested circles do not use space as efficiently as a [treemap](/@d3/treemap), the “wasted” space better reveals the hierarchical structure.`
+)})
+    },
+    {
+      name: "chart",
+      inputs: ["pack","data","d3","DOM","width","height","color","format"],
+      value: (function(pack,data,d3,DOM,width,height,color,format)
+{
+  const root = pack(data);
+
+  const svg = d3.select(DOM.svg(width, height))
+      .style("font", "10px sans-serif")
+      .style("width", "100%")
+      .style("height", "auto")
+      .attr("text-anchor", "middle");
+
+  const shadow = DOM.uid("shadow");
+
+  svg.append("filter")
+      .attr("id", shadow.id)
+    .append("feDropShadow")
+      .attr("flood-opacity", 0.3)
+      .attr("dx", 0)
+      .attr("dy", 1);
+
+  const node = svg.selectAll("g")
+    .data(d3.nest().key(d => d.height).entries(root.descendants()))
+    .join("g")
+      .attr("filter", shadow)
+    .selectAll("g")
+    .data(d => d.values)
+    .join("g")
+      .attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
+
+  node.append("circle")
+      .attr("r", d => d.r)
+      .attr("fill", d => color(d.height));
+
+  const leaf = node.filter(d => !d.children);
+  
+  leaf.select("circle")
+      .attr("id", d => (d.leafUid = DOM.uid("leaf")).id);
+
+  leaf.append("clipPath")
+      .attr("id", d => (d.clipUid = DOM.uid("clip")).id)
+    .append("use")
+      .attr("xlink:href", d => d.leafUid.href);
+
+  leaf.append("text")
+      .attr("clip-path", d => d.clipUid)
+    .selectAll("tspan")
+    .data(d => d.data.name.split(/(?=[A-Z][^A-Z])/g))
+    .join("tspan")
+      .attr("x", 0)
+      .attr("y", (d, i, nodes) => `${i - nodes.length / 2 + 0.8}em`)
+      .text(d => d);
+
+  node.append("title")
+      .text(d => `${d.ancestors().map(d => d.data.name).reverse().join("/")}\n${format(d.value)}`);
+    
+  return svg.node();
+}
+)
+    },
+    {
+      name: "data",
+      inputs: ["d3"],
+      value: (function(d3){return(
+d3.json("inmagina-data.json")
+)})
+    },
+    {
+      name: "pack",
+      inputs: ["d3","width","height"],
+      value: (function(d3,width,height){return(
+data => d3.pack()
+    .size([width - 2, height - 2])
+    .padding(3)
+  (d3.hierarchy(data)
+    .sum(d => d.value)
+    .sort((a, b) => b.value - a.value))
+)})
+    },
+    {
+      name: "width",
+      value: (function(){return(
+975
+)})
+    },
+    {
+      name: "height",
+      inputs: ["width"],
+      value: (function(width){return(
+width
+)})
+    },
+    {
+      name: "format",
+      inputs: ["d3"],
+      value: (function(d3){return(
+d3.format(",d")
+)})
+    },
+    {
+      name: "color",
+      inputs: ["d3"],
+      value: (function(d3){return(
+d3.scaleSequential([8, 0], d3.interpolateMagma)
+)})
+    },
+    {
+      name: "d3",
+      inputs: ["require"],
+      value: (function(require){return(
+require("d3@5")
+)})
+    }
+  ]
+};
+
+const notebook = {
+  id: "0edfeb766ced5a8c@161",
+  modules: [m0]
+};
+
+export default notebook;
