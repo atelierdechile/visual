@@ -1,6 +1,6 @@
 {"name": "RED INmagina",
  "children": [
-             {"name": "1980",
+             {"name": "Generacion 1980",
               "children": [
                           {"name": "KM - Latch",
                           "children": [ {"name": "Location", "size": 1005},
@@ -12,7 +12,7 @@
                           }
                           ]
              }, 
-             {"name": "Objects for Real Desing",
+             {"name": "Generacion 1970",
               "children": [ {"name": "Water", "size": 2001},
                             {"name": "xtream Situations", "size": 2002},
                             {"name": "Drones", "size": 2003},
