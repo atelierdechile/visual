@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<!--  https://tobiasahlin.com/blog/chartjs-charts-to-get-you-started/#2-line-chart   -->
+<html>
+  <head>  
+  </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<canvas id="line-chart" width="100" height="50"></canvas>
+<script>
+new Chart(document.getElementById("line-chart"), {
+  type: 'line',
+  data: {
+    labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+    datasets: [{ 
+        data: [1000000	,	1030000	,	1060900	,	1092727	,	1125509	,	1159274	,	1194052	,	1229874	,	1266770	,	1304773	,	1343916	,	1384234	,	1425761	,	1470245	,	1476861	,	1510533	,	1537572],
+        label: "Capital",
+        borderColor: "#3e95cd",
+        fill: false
+      }, { 
+        data: [1000000	,	1030000	,	1060900	,	1092727	,	1125509	,	1159274	,	1194052	,	1229874	,	1266770	,	1304773	,	1343916	,	1384234	,	1425761	,	1469247	,	1475711	,	1508324	,	1535776],
+        label: "Cuprum",
+        borderColor: "#8e5ea2",
+        fill: false
+      }, { 
+        data: [1000000	,	1030000	,	1060900	,	1092727	,	1125509	,	1159274	,	1194052	,	1229874	,	1266770	,	1304773	,	1343916	,	1384234	,	1425761	,	1468961	,	1476159	,	1509668	,	1536993],
+        label: "Habitat",
+        borderColor: "#3cba9f",
+        fill: false
+      }, { 
+        data: [1000000	,	1030000	,	1060900	,	1092727	,	1125509	,	1159274	,	1194052	,	1229874	,	1266770	,	1304773	,	1343916	,	1384234	,	1425761	,	1474237	,	1483819	,	1516760	,	1544517	],
+        label: "Modelo",
+        borderColor: "#e8c3b9",
+        fill: false
+      }, { 
+        data: [1000000	,	1030000	,	1060900	,	1092727	,	1125509	,	1159274	,	1194052	,	1229874	,	1266770	,	1304773	,	1343916	,	1384234	,	1425761	,	1469674	,	1474818	,	1508739	,	1536047],
+        label: "Plan Vital",
+        borderColor: "#c45850",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Monto acumulado 2018-2019 FONDO A (miles de pesos, un millón inicial)'
+    }
+  }
+});
+</script>
+</html>
